@@ -1,0 +1,36 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/variables-dark";
+
+
+
+
+$text: #f2fcf9;
+$background: #08261d;
+$primary: #4829c7;
+$secondary: #150409;
+$accent: #a0be27;
+
+
+
+
+// $text: #050505;
+// $background: #fafafa;
+// $primary: #4829c7;
+// $secondary: #f7d4df;
+// $accent: #b2d42b;
+
+
+
+[data-bs-theme="dark"] {
+    --bs-body-color: #{$text};
+    --bs-body-color-rgb: #{to-rgb($text)};
+    --bs-body-bg: #{$background};
+    --bs-body-bg-rgb: #{to-rgb($background)};
+    --bs-tertiary-bg: #{$accent};
+    
+  
+  .btn-primary {
+    --bs-btn-bg: #{$primary};
+  }
+}
