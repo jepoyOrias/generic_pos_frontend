@@ -23,7 +23,7 @@ onBeforeMount(()=>{
 
 onMounted(()=>{
  localStorage.setItem('theme', JSON.parse(isDarkmode.value));
- document.documentElement.setAttribute('data-bs-theme', JSON.parse(isDarkmode.value)? 'dark' : 'light');
+ document.documentElement.setAttribute('data-bs-theme', JSON.parse(isDarkmode.value)? 'custom-dark' : 'custom-light');
 });
 
 

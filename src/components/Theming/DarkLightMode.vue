@@ -14,7 +14,7 @@ const isDarkmode = ref(false);
 const changeTheme = ()=>{
       isDarkmode.value = localStorage.getItem("theme");
       isDarkmode.value = !JSON.parse(isDarkmode.value)
-      document.documentElement.setAttribute('data-bs-theme', isDarkmode.value ? 'dark' :  'light');
+      document.documentElement.setAttribute('data-bs-theme', isDarkmode.value ? 'custom-dark' :  'custom-light');
       localStorage.setItem('theme', isDarkmode.value);
 }
 

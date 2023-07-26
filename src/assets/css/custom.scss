@@ -1,36 +1,76 @@
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/variables-dark";
+@import '../../../node_modules/bootstrap//scss/bootstrap.scss';
+
+$text: #050505;
+$background: #fafafa;
+$primary: #c9e6ad;
+$secondary: #e5f3d8;
+$accent: #7dc33c;
+
+
+
+$text-dark: #fafafa;
+$background-dark: #050505;
+$primary-dark: #c9e6ad;
+$secondary-dark: #19270c;
+$accent-dark: #b1db8a;
 
 
 
 
-$text: #f2fcf9;
-$background: #08261d;
-$primary: #4829c7;
-$secondary: #150409;
-$accent: #a0be27;
 
-
-
-
-// $text: #050505;
-// $background: #fafafa;
-// $primary: #4829c7;
-// $secondary: #f7d4df;
-// $accent: #b2d42b;
-
-
-
-[data-bs-theme="dark"] {
-    --bs-body-color: #{$text};
-    --bs-body-color-rgb: #{to-rgb($text)};
+[data-bs-theme="custom-light"] {
+    
+    color-scheme: light;
+    --bs-heading-color: #{$text};
+    --bs-secondary-color: #{$secondary};
     --bs-body-bg: #{$background};
     --bs-body-bg-rgb: #{to-rgb($background)};
     --bs-tertiary-bg: #{$accent};
-    
-  
-  .btn-primary {
-    --bs-btn-bg: #{$primary};
-  }
+    --bs-tertiary-bg: #{$accent};
+    --bs-primaryy: #{$primary};
 }
+
+[data-bs-theme="custom-dark"] {
+    color-scheme: dark;
+    --bs-heading-color: #{$text-dark};
+    --bs-secondary-color: #{$text-dark};
+    --bs-body-bg: #{$background-dark};
+    --bs-body-bg-rgb: #{to-rgb($background-dark)};
+    --bs-tertiary-bg: #{$accent-dark};
+    --bs-tertiary-bg: #{$accent-dark};
+}
+
+
+.btn-primary {
+    --bs-btn-color: #{$text};
+    --bs-btn-bg: #{$primary};
+    --bs-btn-border-color: #{$primary};
+    --bs-btn-hover-color: #{$text};
+    --bs-btn-hover-bg: #{$primary};
+    --bs-btn-hover-border-color: #{$primary};
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #{$text};
+    --bs-btn-active-bg: #{$primary};
+    --bs-btn-active-border-color: #{$primary};
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #{$text};
+    --bs-btn-disabled-bg: #{$primary};
+    --bs-btn-disabled-border-color: #{$primary};
+  }
+
+  .btn-secondary {
+    --bs-btn-color: #{$text};
+    --bs-btn-bg: #{$secondary};
+    --bs-btn-border-color: #{$secondary};
+    --bs-btn-hover-color: #{$text};
+    --bs-btn-hover-bg: #{$secondary};
+    --bs-btn-hover-border-color: #{$secondary};
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #{$text};
+    --bs-btn-active-bg: #{$secondary};
+    --bs-btn-active-border-color: #{$secondary};
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #{$text};
+    --bs-btn-disabled-bg: #{$secondary};
+    --bs-btn-disabled-border-color: #{$secondary};
+  }
