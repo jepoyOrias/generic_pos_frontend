@@ -1,12 +1,20 @@
 <template>
   <div class="d-flex"> 
     <div>
-        <div class="loading" v-if="productStore.loading">Loading....</div>
-            <p v-for="products in productStore.products" :key="products.id">
-            {{ products.title }}
+        <button @click="all">
+            all
+        </button>
+        <button @click="lessthan50">
+             less than 50
+        </button>
+    </div>
+    <div>
+        <div class="loading" v-if="loading">Loading....</div>
+            <p v-for="product in products" :key="product.id" class="ps-5">
+            {{ product.title }}
             </p>
         </div>
-    <form>
+        <form>
                 <div class="mb-3">
                     <label for="productInput" class="form-label" >Product Title</label>
                     <input type="text" class="form-control" id="productInput" aria-describedby="emailHelp" v-model="form.data.title">
@@ -20,7 +28,7 @@
 <script setup>
 import {reactive} from 'vue'
 import {useProductStore} from '@/store/ProductsStore.js';
-
+import { storeToRefs } from 'pinia';
 
 const initializedProduct = {
     id : null,
@@ -32,10 +40,12 @@ const form = reactive({
     data: initializedProduct
 });
 
+
 const productStore  = useProductStore();
 
-productStore.getProducts();
+const {products, loading} = storeToRefs(useProductStore());
 
+productStore.getProducts();
 
 const addProduct = ()=>{
     form.data.id = productStore.products.length + 1;
@@ -49,6 +59,9 @@ const resetForm = ()=>{
 }
 
 
+const lessthan50 = ()=>{
+
+}
 
 
 

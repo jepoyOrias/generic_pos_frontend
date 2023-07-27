@@ -37,6 +37,11 @@ $accent-dark: #b1db8a;
       .text-body-emphasis{
         --bs-emphasis-color : #{$text};
       }
+      .form-control{
+        background-color: var(--bs-headeing-color);
+      }
+
+   
 }
 
 [data-bs-theme="custom-dark"] {
@@ -59,8 +64,12 @@ $accent-dark: #b1db8a;
       .text-body-emphasis{
         --bs-emphasis-color : #{$text-dark};
       }
-}
 
+      .form-control{
+        background-color: var(--bs-body-bg);
+      }
+
+}
 
 .btn-primary {
     --bs-btn-color: #{$text};
