@@ -8,11 +8,13 @@
 
 
 
-<div class="container">
-  <!-- Three columns of text below the carousel -->
-  <!-- START THE FEATURE Section -->
-    <FeatureComponent></FeatureComponent>
-  <!-- /END THE FEATURE Section -->
+        <div class="container">
+      <!-- Three columns of text below the carousel -->
+      <!-- START THE FEATURE Section -->
+        <FeatureComponent></FeatureComponent>
+      <!-- /END THE FEATURE Section -->
+
+     
 
 </div><!-- /.container -->
 
@@ -29,6 +31,7 @@
 <script setup>
 import HeroComponent from '@/components/LandingPage/HeroComponent.vue';
 import FeatureComponent from '@/components/LandingPage/FeatureComponent.vue';
+
 
 </script>
 
