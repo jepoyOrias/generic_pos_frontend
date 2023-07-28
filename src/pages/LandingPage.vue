@@ -10,7 +10,7 @@
         <div class="container">
       <!-- Three columns of text below the carousel -->
       <!-- START THE FEATURE Section -->
-        <FeatureComponent></FeatureComponent>
+        <FeatureComponent class="my-5 py-5"></FeatureComponent>
       <!-- /END THE FEATURE Section -->
 
      
@@ -18,11 +18,6 @@
 </div><!-- /.container -->
 
 
-<!-- FOOTER -->
-<footer class="container">
-  <p class="float-end"><a href="#">Back to top</a></p>
-  <p>© 2017–2023 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-</footer>
 </main>
   </div>
 </template>

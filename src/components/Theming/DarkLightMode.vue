@@ -1,7 +1,7 @@
 <template>
   <div>
     <button type="button" class="pos-circle btn btn-primary" @click="changeTheme">
-        <i class="bi-moon-stars fs-6 "></i>
+        <i class="bi-moon-stars fs-6 mx-0 "></i>
     </button>
   </div>
 </template>
