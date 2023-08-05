@@ -19,13 +19,12 @@ export const useAuthStore = defineStore('AuthStore', {
         isAuthenticated: (state) => state.isAuthenticated,
     },
     actions: {
-       login(email, password){
-               axiosInstance.post('login', {
-                  email: email,
-                  password: password,
-
-              }).then(response => console.log(response))
-              .catch(error => console.log(error))
+       async = login(email, password){
+            const response = await fetch('https://go-jep.000webhostapp.com/api/login',{
+              headers: {'Accept': 'application/json', 'Content-Type': 'application/json'},
+              email: email,
+              password: password,
+            })
             
             
         },
