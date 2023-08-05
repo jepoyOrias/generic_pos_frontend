@@ -19,14 +19,15 @@ export const useAuthStore = defineStore('AuthStore', {
         isAuthenticated: (state) => state.isAuthenticated,
     },
     actions: {
-       async = login(email, password){
-            const response = await fetch('https://go-jep.000webhostapp.com/api/login',{
+       async login(email, password){
+            const resp = await fetch('https://go-jep.000webhostapp.com/api/login',{
+              method: 'POST',
               headers: {'Accept': 'application/json', 'Content-Type': 'application/json'},
               email: email,
               password: password,
-            })
+            });
             
-            
+            console.log(resp);
         },
       logout(){
             this.isAuthenticated =  false;
