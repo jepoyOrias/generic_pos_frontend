@@ -22,7 +22,8 @@ export const useAuthStore = defineStore('AuthStore', {
        async login(email, password){
             const resp = await fetch('https://go-jep.000webhostapp.com/api/login',{
               method: 'POST',
-              headers: {'Accept': 'application/json', 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'},
+              crossorigin: true,    
+              mode: 'no-cors',      
               body: JSON.stringify({
                 email: email,
                 password: password,
